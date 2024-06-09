@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>Bejelentkezes</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" media="screen" href="/style.css">
+   <script src="/login.js"></script>
+</head>
+<body>
+    <div id="Titlepart">
+        <h1>JOIN</h1>
+    </div>
+    <div id="signUp">
+        <form action="signUp" method="post" enctype="application/x-www-form-urlencoded">
+            <label for="name">Full name:</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="nickName">Nick name:</label>
+            <input type="text" name="nickName" id="nickName" required><br>
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required><br>
+
+            <label for="passwordUp">Password:</label>
+            <input type="password" name="passwordUp" id="passwordUp" required><br>
+
+            <label for="passwordUp1">Password again:</label>
+            <input type="password" name="passwordUp1" id="passwordUp1" required><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <div id="signIn">
+        <form action="signIn" method="post" enctype="application/x-www-form-urlencoded">
+            <label for="nickNameIn">Nick name:</label>
+            <input type="text" name="nickNameIn" id="nickNameIn" required><br>
+
+            <label for="passwordIn">password:</label>
+            <input type="password" name="passwordIn" id="passwordIn" required><br>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+    <div id="switch">
+      <a id="signinswitch">Sign In</a>
+      <a id="signupswitch">Sing Up</a>
+    </div>
+    <footer>
+        <p>Made by: brim2205</p>
+    </footer>
+ </body>
+ </html>

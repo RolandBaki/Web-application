@@ -1,0 +1,18 @@
+<% if(userName) { %>
+    <p id="username"><%= userName %></p>
+    <img src="/Pic/logout.png" id="logout">
+    <script>
+        const logOut = document.getElementById('logout');
+        logOut.addEventListener('click', () => {
+          window.location.href = '/logOut';
+        });
+    </script>
+<% } else { %>
+    <img src="/Pic/login.png" id="login">
+    <script>
+        const logIn = document.getElementById('login');
+        logIn.addEventListener('click', () => {
+          window.location.href = '/logIn';
+        });
+    </script>
+<% } %>

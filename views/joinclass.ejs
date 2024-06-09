@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>JoinClass</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" type="text/css" media="screen" href="/style.css">
+   <script src="/script.js"></script>
+</head>
+<body>
+   <div id="Titlepart">
+       <h1>Joining a new Class</h1>
+       <%- include('./partials/loggedinuser.ejs',{userName}) %>
+   </div>
+   <div id="Mainadding">
+       <button id="backbutton" type="button">Back</button>
+       <form action="JoinClass" method="post" enctype="application/x-www-form-urlencoded">
+           <label for="classcode">Class code:</label>
+           <select name="classcode" id="classcode" required>
+            <% classes.forEach(classItem => { %>
+              <option value="<%= classItem %>"><%= classItem %></option>
+            <% }); %>
+           </select><br>
+          
+           <label for="yourid">Your ID:</label>
+           <select name="yourid" id="yourid" required>
+            <% users.forEach(userItem => { %>
+              <option value="<%= userItem %>"><%= userItem %></option>
+            <% }); %>
+           </select><br>
+           <button type="submit">Submit</button>
+       </form>
+   </div>
+   <footer>
+       <p>Made by: brim2205</p>
+   </footer>
+</body>
+</html>

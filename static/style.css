@@ -1,0 +1,116 @@
+body{
+    text-align: center;
+    background-size: 100%;
+    background-image: url('./Pic/back.jpg');
+    margin: 50px auto;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#HomePage div{
+    position: absolute;
+    background-color: white;
+    height: 80%;
+    width: 60%;
+    left: 20%;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+#welcome{
+    padding-top: 200px;
+    color:black;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#Titlepart h1{
+    text-align: center;
+    color:black;
+    background-color: white;
+    font-weight: 800;
+    border-radius: 15px;
+    width: 30%;
+    height: auto;
+    margin-left: 35%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+#Mainadding{
+    background-color: white;
+    text-align: center;
+    color:black;
+    width: 60%;
+    height: 30em;
+    margin-left: 20%;
+    margin-top: 5em;
+    padding-top: 2em;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+#backbutton{
+    position: absolute;
+    left: 20%;
+    top: 11.5em;
+    border-radius: 15px;
+    box-shadow: none;
+}
+
+label{
+    display: block;
+    margin-top: 0em;
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: black;
+}
+
+button{
+    font-weight: 800;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    height: 3em;
+    width: 5em;
+    margin-top: 2em;
+    color:white;
+    background-color: rgba(82,102,139,255);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+footer{
+    text-align: center;
+}
+
+#username{
+    background-color: crimson;
+    color: white;
+    border-radius: 12px;
+}
+
+img{
+    position: absolute;
+    top: 2em;
+    right: 10%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 30px;
+}
+
+#signUp, #signIn{
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    width: 60%;
+    height: 70%;
+    left: 20%;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+#switch{
+    position: fixed;
+    bottom: 20%;
+    left: 45%;
+    text-align: center;
+    color:black;
+}

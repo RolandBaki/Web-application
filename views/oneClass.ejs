@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/homestyle.css">
+    <script src="/oneclassscript.js"></script>
+</head>
+<body>
+    <div>
+        <button id="backbutton" type="button">Back</button>
+        <%- include('./partials/loggedinuser.ejs',{userName}) %>
+        <section>
+            <h1><%= myClass.className %></h1>
+            <h2><%= myClass.classCode %> </h2>
+            <p>Year For: <%= myClass.yearFor %></p>
+            <p>Course Number: <%= myClass.coursesNum %></p>
+            <p>Seminar Number: <%= myClass.seminarNum %></p>
+            <p>Lab Number: <%= myClass.labNum %></p>
+            <p>Owner: <%= myClass.classOwner %></p>
+        </section>
+        <section>
+            <p>Files:</p>
+            <ul>
+                <% files.forEach(file => { %>
+                    <li>
+                        <a href="/<%=file.fName%>" id="<%=file.fName%>link"download><%= file.name %></a>
+                        <% if (userName == myClass.classOwner) { %>
+                            <button type="button" class="delete" id="<%=file.fName%>" filepath="<%=file.fName%>" classcode="<%= myClass.classCode%>">Delete</button>
+                        <% } %> 
+                    </li>
+                <% }); %>   
+            </ul>
+        </section>
+        <% if (userName == myClass.classOwner) { %>  
+            <p id="message"></p>
+            <form action="/AddFileP/<%= myClass.classCode %>" method="post" enctype="multipart/form-data">
+                <label for="fileupload">Upload File:</label>
+                <input type="file" name="fileupload" id="fileupload" required><br>
+                <button type="submit">Submit</button>
+            </form>
+        <% } %> 
+    </div>
+</body>
+</html>

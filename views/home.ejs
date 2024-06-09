@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/homestyle.css">
+    <script src="/homescript.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="/AddClassP">AddClassP</a>
+            <a href="/JoinClass">JoinClass</a>
+            <a href="/LeaveClass">LeaveClass</a>
+            <input type="text" placeholder="Search..">
+            <%- include('./partials/loggedinuser.ejs',{userName}) %>
+        </nav>
+    </header>   
+    <div>
+        <p>We have <%= classes.length %> classes:</p>
+        <% classes.forEach(function(classItem) { %>
+           <section>
+            <h1><a href="Classes/<%= classItem.classCode %>"><%= classItem.className %></a></h1>
+            <h2 class="classcode" classcode="<%= classItem.classCode %>"><%= classItem.classCode %> </h2>
+            <p id="<%= classItem.classCode %>"></p>
+           </section> 
+        <% }); %>
+    </div>
+</body>
+</html>

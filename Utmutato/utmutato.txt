@@ -1,0 +1,48 @@
+University nevű adatbázisra van szükségünk, melyben a tábla látrehozások a DB nevű mappában vannak,
+Az run watch-al kipróbálható a weboldal, localhost:8080 a főoldal, hol megpróbltam magától érhetővé tenné a kinézetet
+Ott mindig megjelennek az órák, a Nevükre kattintva részletesebb indormációkkal tekithető meg.
+A file fel és letöltés is ott találhato.
+Ugyancsak a főoldalról elérhető az órára való be és ki lépes
+
+
+===================================================================
+Itt megadom aAdatbázisom scriptjét, mivel létrehoztam(MYSQL workbenchben dolgoztam):
+
+CREATE DATABASE IF NOT EXISTS University;
+USE University;
+
+CREATE TABLE IF NOT EXISTS users (
+    id VARCHAR(255) PRIMARY KEY
+);
+
+CREATE TABLE IF NOT EXISTS classes (
+    classCode VARCHAR(255) PRIMARY KEY,
+    className VARCHAR(255),
+    yearFor INT,
+    coursesNum INT,
+    seminarNum INT,
+    labNum INT,
+    classOwner VARCHAR(255),
+    FOREIGN KEY (classOwner) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS files (
+    fName VARCHAR(255) PRIMARY KEY,
+    classCode VARCHAR(255),
+    name VARCHAR(255),
+    FOREIGN KEY (classCode) REFERENCES classes(classCode)
+);
+
+CREATE TABLE IF NOT EXISTS regist (
+    classCode VARCHAR(255),
+    userId VARCHAR(255),
+    joinDate DATETIME,
+    CONSTRAINT PK_ID PRIMARY KEY (classCode, userId),
+    FOREIGN KEY (classCode) REFERENCES classes(classCode),
+    FOREIGN KEY (userId) REFERENCES users(id)
+);
+
+
+
+=================================================================================================
+Remélem eme infórmációk jegyében könnyen kipróbálható az oldalam.

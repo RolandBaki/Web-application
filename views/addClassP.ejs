@@ -1,0 +1,43 @@
+ <!DOCTYPE html>
+ <html lang="eng">
+ <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TantargyHozzaAdas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/style.css">
+    <script src="/script.js"></script>
+ </head>
+ <body>
+    <div id="Titlepart">
+        <h1>Adding a new Class</h1>
+        <%- include('./partials/loggedinuser.ejs',{userName}) %>
+    </div>
+    <div id="Mainadding">
+        <button id="backbutton" type="button">Back</button>
+        <form action="AddClassP" method="post" enctype="application/x-www-form-urlencoded">
+            <label for="classcode">Class code:</label>
+            <input type="text" name="classcode" id="classcode" required>
+
+            <label for="classname">Class name:</label>
+            <input type="text" name="classname" id="classname" required><br>
+
+            <label for="ev">Evfolyam:</label>
+            <input type="number" name="ev" id="ev" min="1" max="4" required><br>
+
+            <label for="courses">CoursesNumber:</label>
+            <input type="number" name="courses" id="courses" min="5" max="14" required><br>
+
+            <label for="seminar">SeminarNumber:</label>
+            <input type="number" name="seminar" id="seminar" min="2" max="8" required><br>
+
+            <label for="lab">LabNumber:</label>
+            <input type="number" name="lab" id="lab" min="2" max="8" required><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>Made by: brim2205</p>
+    </footer>
+ </body>
+ </html>

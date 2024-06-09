@@ -1,0 +1,59 @@
+body{
+    text-align: center;
+    background-size: 100%;
+    background-image: url('./Pic/back.jpg');
+    margin: 50px auto;
+}
+
+nav{
+    margin-top: 0;
+    padding: 20px 20px;
+}
+a{
+    display: inline-block;
+    background-color: white;
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1em 2em;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+div{
+    position: absolute;
+    background-color: white;
+    width: 60%;
+    left: 20%;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 1);
+}
+
+p{
+    display: inline-flex;
+    color:black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+h1{
+    margin-top: 5em;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+#username{
+    background-color: #dc143c;
+    color: white;
+    border-radius: 12px;
+}
+
+img{
+    position: absolute;
+    top: 2em;
+    right: 10%;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 30px;
+}
